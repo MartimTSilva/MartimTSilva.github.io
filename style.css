@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    
+}
+body *{
+	font-family:"Rubik","Arial",sans-serif;
+}
+
+/***********NAV-BAR***********/
+#nav-bar {
+    position: sticky;
+    z-index: 10;
+    background-color: #191a1d;
+}
+.navbar{
+    background-color: #191a1d;
+    padding: 61px !important;
+    margin-right: 0;
+    width: 85%;
+    margin-right: auto;
+    margin-left: auto;
+}
+.navbar-brand {
+    padding-left: 20px;
+    color: white !important;
+    font-size: 28px !important;
+}
+.navbar-brand::after {
+    width:100%;
+	max-width:50px;
+	height:6px;
+	display:block;
+	content:'';
+	border-radius:1000px;
+    background:#e95420;
+    margin-top: 5px;
+    -webkit-transition:max-width ease .3s;
+	transition:max-width ease .3s
+}
+.navbar-brand:hover::after{
+    max-width:25px;
+}
+.navbar-nav li {
+    padding: 0 10px;
+}
+.navbar-nav li a{
+    color: #ababab !important;
+    font-weight: 600;
+    float: right;
+    text-align: left;
+    position: relative;
+    text-decoration: none;
+    font-size: 22px;
+    margin-right: 25px;
+}
+.navbar-nav li a:hover{
+    transition: .3s;
+    color: #fff !important;
+}
+.navbar-nav li a:after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%) scaleX(0);
+    -webkit-transform: translateX(-50%) scaleX(0);
+    width: 55%;
+    height: 6px;
+    background-color: #e95420;
+    margin-bottom: -5px;
+    border-radius:1000px;
+    -webkit-transition: transform 250ms;
+    transition: transform 250ms;
+}
+.navbar-nav li a:hover:after{
+    transform: translateX(-50%) scaleX(1);
+    -webkit-transform: translateX(-50%) scaleX(1);
+}
+
+
+/***********Banner***********/
+#banner {
+    background-color: #191a1d;
+    color: #fff;
+    padding-top: 5%;
+}
+.banner-title {
+    font-size: 57px;
+    font-weight: 600;
+    margin-top: 50px;
+    color: #fff;
+    letter-spacing: 1px;
+}
+.banner-subtitle{
+    font-size: 25px;
+    margin-top: 28px;
+    margin-bottom: 28px;
+    color: #ababab;
+}
+.bottom-img {
+    width: 100%;
+}
+#banner .btn{
+    background-color: #e95420;
+    border: none;
+    border-radius: 22px;
+    width: 200px;
+    line-height: 40px;
+    font-size: 18px;
+    color: #fff;
+    letter-spacing: 0.5px;
+    transition: transform .2s; /* Animation */
+}
+#banner .btn:hover{
+    background-color: transparent;
+    border: solid 3px #e95420;
+    transform: scale(1.1); /* Zoom scale */
+}
+.img-fluid{
+    transition: transform .2s; /* Animation */
+    margin-left: 75px;
+    max-width: 70% !important;
+}
+.img-fluid:hover {
+    transform: scale(1.009); /* Zoom scale*/
+}
