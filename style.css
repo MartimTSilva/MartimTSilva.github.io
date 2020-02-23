@@ -77,7 +77,26 @@ body *{
     transform: translateX(-50%) scaleX(1);
     -webkit-transform: translateX(-50%) scaleX(1);
 }
-
+@media screen and (max-width:768px){
+    .navbar-brand{
+        padding-left: 0;
+        font-size: 25px !important;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+    .navbar{
+        padding: 5px 0px 10px 0px !important;
+        border-bottom: 2px solid rgba(255,255,255,0.1);
+        margin-bottom: -1px !important;
+        width: 92%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .navbar-light .navbar-toggler {
+        border: none;
+        color: #fff !important;
+    }
+}
 
 /***********Banner***********/
 #banner {
@@ -124,4 +143,24 @@ body *{
 }
 .img-fluid:hover {
     transform: scale(1.009); /* Zoom scale*/
+}
+
+@media screen and (max-width:768px){
+    #banner .banner-title{
+        font-size: 38px;
+        font-weight: 600;
+        margin-top: 0;
+        padding-top: 13px;
+    }
+    #banner .banner-subtitle{
+        font-size: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    #banner .img-fluid{
+        margin: 50px;
+    }
+    #banner .col-md-6{
+        text-align: -webkit-center;
+    }
 }
