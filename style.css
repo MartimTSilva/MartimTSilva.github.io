@@ -97,6 +97,41 @@ body *{
         color: #fff !important;
     }
 }
+@media screen and (max-width:1100px){
+    .navbar-brand{
+        padding-left: 0;
+        font-size: 25px !important;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+    .navbar{
+        padding: 5px 0px 10px 0px !important;
+        border-bottom: 2px solid rgba(255,255,255,0.1);
+        margin-bottom: -1px !important;
+        width: 92%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .navbar-light .navbar-toggler {
+        border: none;
+        color: #fff !important;
+    }
+}
+@media screen and (max-width:767px){
+    .navbar-brand{
+        font-size: 20px !important;
+        letter-spacing: 0;
+    }
+}
+@media screen and (max-width:250px){
+    #nav-bar .navbar-toggler{
+        padding: 0;
+    }
+    #nav-bar .navbar-brand{
+        font-size: 18px !important;
+        margin-right: 0;
+    }
+}
 
 /***********Banner***********/
 #banner {
@@ -107,8 +142,8 @@ body *{
 .banner-title {
     font-size: 57px;
     font-weight: 600;
-    margin-top: 50px;
     color: #fff;
+    margin: auto;
     letter-spacing: 1px;
 }
 .banner-subtitle{
@@ -129,28 +164,32 @@ body *{
     font-size: 18px;
     color: #fff;
     letter-spacing: 0.5px;
-    transition: transform .2s; /* Animation */
+    transition: all ease .3s; /* Animation */
 }
 #banner .btn:hover{
-    background-color: transparent;
-    border: solid 3px #e95420;
-    transform: scale(1.1); /* Zoom scale */
+    -webkit-transform: scale(1.075);
+    transform: scale(1.075);
+    -webkit-box-shadow: inset 0 0 0 2px #e95420;
+    box-shadow: inset 0 0 0 2px #e95420;
+    background: none;
 }
 .img-fluid{
     transition: transform .2s; /* Animation */
-    margin-left: 75px;
     max-width: 70% !important;
 }
 .img-fluid:hover {
     transform: scale(1.009); /* Zoom scale*/
 }
-
-@media screen and (max-width:768px){
+#banner .img{
+    text-align: right;
+}
+#banner .text{
+    align-self: center;
+}
+@media screen and (max-width:767px){
     #banner .banner-title{
         font-size: 38px;
         font-weight: 600;
-        margin-top: 0;
-        padding-top: 13px;
     }
     #banner .banner-subtitle{
         font-size: 20px;
@@ -159,8 +198,51 @@ body *{
     }
     #banner .img-fluid{
         margin: 50px;
+        width: 50%;
+        margin-right: 0;
     }
     #banner .col-md-6{
         text-align: -webkit-center;
     }
+}
+@media screen and (max-width:1100px){
+    #banner .banner-title{
+        font-size: 38px;
+        font-weight: 600;
+    }
+    #banner .banner-subtitle{
+        font-size: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    #banner .text{
+        align-self: center;
+    }
+}
+@media screen and (max-width:1390px){
+    #banner .img-fluid{
+        width: 50%;
+        margin-left: 0;
+    }
+    #banner .img{
+        align-self: center;
+    }
+}
+@media screen and (max-width:767px){
+    #banner .img-fluid{
+        
+    }
+}
+@media screen and (max-width:250px){
+    #banner .banner-title{
+        font-size: 32px;
+    }
+    #banner .banner-subtitle{
+        font-size: 16px;
+    } 
+    #banner .btn{
+        width: auto;
+        font-size: 14px;
+        letter-spacing: 0;
+    } 
 }
