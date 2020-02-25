@@ -8,7 +8,7 @@ body *{
 }
 html {
     scroll-behavior: smooth;
-}
+  }
 p{
     line-height: 160%;
     font-size: 21px;
@@ -650,8 +650,4 @@ footer .fab:hover{
 footer .fab{
     color: #ababab;
     font-size: 20px;
-}
-
-#about .btn-cenas{
-    background-color: violet !important;
 }
