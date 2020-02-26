@@ -12,19 +12,20 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/css/lightbox.min.css">
+    <script type="text/javascript" src="assets/js/lightbox-plus-jquery.min.js"></script>
 </head>
 <body>
     <!---------------NAV-------------------->
     <section id="nav-bar">
         <nav class="navbar navbar-expand-lg navbar-light">
             <a class="navbar-brand" href="#banner">Martim Silva</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
-              <i class="fas fa-bars"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="hamburger">
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+            </div>
+            <div class="collapse navbar-collapse">
               <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
                   <a class="nav-link" href="#about">About Me</a>
@@ -41,6 +42,7 @@
               </ul>
             </div>
           </nav>
+                        
     </section>
 
     <!---------------Banner-------------------->
@@ -49,7 +51,7 @@
         <div class="row">
           <div class="col-md-6 text">
             <h1 class="banner-title">Hi, I'm Martim.</h1>
-            <h2 class="banner-subtitle"> Welcome to my personal website. I'm a software and web developer from Leiria, Portugal.</h2>
+            <h2 class="banner-subtitle"> Welcome to my personal website. I'm a software and web developer from Portugal.</h2>
             <a href="#projects"><button type="button" class="btn btn-primary">My Projects</button></a>
           </div>
           <div class="col-md-6 img">
@@ -77,7 +79,7 @@
               Since then, I knew what I wanted to do for the rest of my life.
             </p>
             <div class="curriculum">
-              <button type="button" class="btn btn-primary">My Curriculum</button>
+              <a href="assets/img/Curriculum.pdf"><button type="button" class="btn btn-primary">My Curriculum</button></a>
             </div>
             <div class="social-buttons">
               <a href="https://github.com/MartimTSilva"><i class="fab fa-github"></i></a>
@@ -139,7 +141,7 @@
       </div>
       <div class="row">
         <div class="col-md-6 img">            
-          <img src="img/Perfil.jpg" class="img-fluid">
+          <a href="assets/img/project_techpower_web.gif" data-lightbox="mygallery" data-title="TechPower WEB"><img src="assets/img/project_techpower_web.gif" class="img-fluid"></a>
         </div>
         <div class="col-md-6 text">
           <div class="project-info">
@@ -147,20 +149,18 @@
             <p>E-commerce website with back-end and front-end for a school project, made with:</p>
             <li>PHP</li>
             <li>REST/MySQL</li>
-            <li>HTML5</li>
-            <li>CSS3</li>
+            <li>HTML5/CSS3</li>
             <li>JavaScript</li>
           </div>
           <div class="project-buttons">
             <a href="https://github.com/MartimTSilva/Techpower-web"><button type="button" class="btn btn-primary"><i class="fab fa-github md-light"></i>&nbsp;GitHub</button></a>
-            <a href=""><button class="btn btn-primary"><i class="far fa-eye"></i>&nbsp;Live Demo</button></a>
           </div>
         </div>
       </div>
       <hr>
       <div class="row">
         <div class="col-md-6 img">            
-          <img src="assets/img/project_techpower_android.png" class="img-fluid">
+          <a href="assets/img/project_techpower_android.gif" data-lightbox="mygallery" data-title="TechPower ANDROID"><img src="assets/img/project_techpower_android.gif" class="img-fluid"></a>
         </div>
         <div class="col-md-6 text">
           <div class="project-info">
@@ -172,14 +172,13 @@
           </div>
           <div class="project-buttons">
             <a href="https://github.com/MartimTSilva/Techpower-android"><button type="button" class="btn btn-primary"><i class="fab fa-github md-light"></i>&nbsp;GitHub</button></a>
-            <a href="#"><button type="button" class="btn btn-primary"><i class="fas fa-download"></i>&nbsp;Download APK</button></a>
           </div>
         </div>
       </div>
       <hr>
       <div class="row">
         <div class="col-md-6 img">            
-          <img src="assets/img/project_realstand.png" class="img-fluid">
+          <a href="assets/img/project_realstand.png" data-lightbox="mygallery" data-title="Real Stand"><img src="assets/img/project_realstand.png" class="img-fluid"></a>
         </div>
         <div class="col-md-6 text">
           <div class="project-info">
@@ -191,14 +190,13 @@
           </div>
           <div class="project-buttons">
             <a href="https://github.com/MartimTSilva/RealStand_2180691_2180686"><button type="button" class="btn btn-primary"><i class="fab fa-github md-light"></i>&nbsp;GitHub</button></a>
-            <button type="button" class="btn btn-primary"><i class="fas fa-download"></i>&nbsp;Download .EXE</button>
           </div>
         </div>
       </div>
       <hr>
       <div class="row">
         <div class="col-md-6 img">            
-          <img src="assets/img/project_password.png" class="img-fluid">
+          <a href="assets/img/project_password.png" data-lightbox="mygallery" data-title="Password Manager"><img src="assets/img/project_password.png" class="img-fluid"></a>
         </div>
         <div class="col-md-6 text">
           <div class="project-info">
@@ -208,7 +206,6 @@
           </div>
           <div class="project-buttons">
             <a href="https://github.com/MartimTSilva/Gestor-de-Passwords"><button type="button" class="btn btn-primary"><i class="fab fa-github md-light"></i>&nbsp;GitHub</button></a>
-            <a href="#"><button type="button" class="btn btn-primary"><i class="fas fa-download"></i>&nbsp;Download .EXE</button></a>
           </div>
         </div>
       </div>
@@ -251,8 +248,7 @@
     </div>
   </footer>
 
-  <!---------------JavaScript-------------------->
-  <script src="assets/js/btnTop.js"></script>
+  <script src="assets/js/app.js"></script>
 </body>
 </html>
 
