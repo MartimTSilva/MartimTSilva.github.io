@@ -68,25 +68,20 @@ p{
 }
 
 /***********NAV-BAR***********/
-#nav-bar {
-    position: sticky;
-    z-index: 10;
-    background-color: #191a1d;
-}
-#nav-bar .navbar{
-    background-color: #191a1d;
-    padding: 61px !important;
-    margin-right: 0;
+
+.header .navbar{
+    padding: 61px;
     width: 85%;
     margin-right: auto;
     margin-left: auto;
 }
-#nav-bar .navbar-brand {
-    padding-left: 20px;
+.header .logo {
+    float: left;
     color: white !important;
     font-size: 28px !important;
+    margin-bottom: 0px;
 }
-#nav-bar .navbar-brand::after {
+.header .logo::after {
     width:100%;
 	max-width:50px;
 	height:6px;
@@ -98,13 +93,18 @@ p{
     -webkit-transition:max-width ease .3s;
 	transition:max-width ease .3s
 }
-#nav-bar .navbar-brand:hover::after{
+.header .logo:hover::after{
     max-width:25px;
 }
-#nav-bar .navbar-nav li {
-    padding: 0 10px;
+.header{
+    position: sticky;
+    z-index: 10;
+    background-color: #191a1d;
 }
-#nav-bar .navbar-nav li a{
+.menu{
+    float: right;
+}
+.menu a{
     color: #ababab !important;
     font-weight: 600;
     float: right;
@@ -112,13 +112,17 @@ p{
     position: relative;
     text-decoration: none;
     font-size: 22px;
-    margin-right: 25px;
+    margin-right: 50px;
 }
-#nav-bar .navbar-nav li a:hover{
+.menu a:nth-child(4){
+    margin-right: 0;
+}
+.menu a:hover{
     transition: .3s;
     color: #fff !important;
+    text-decoration: none;
 }
-#nav-bar .navbar-nav li a:after{
+.menu a:after{
     content: '';
     position: absolute;
     left: 50%;
@@ -133,63 +137,127 @@ p{
     -webkit-transition: transform 250ms;
     transition: transform 250ms;
 }
-#nav-bar .navbar-nav li a:hover:after{
+.menu a:hover:after{
     transform: translateX(-50%) scaleX(1);
     -webkit-transform: translateX(-50%) scaleX(1);
 }
+.show-menu-btn,.hide-menu-btn{
+    transition: 0.4s;
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+    margin: 0;
+    width: 21px;
+}
+.show-menu-btn{
+    text-align-last: right;
+}
+.menu a:hover,
+.show-menu-btn:hover,
+.hide-menu-btn:hover{
+    color: #e95420;
+}
+#chk{
+    position: absolute;
+    visibility: hidden;
+    z-index: -1111;
+}
+.menu .mobile{
+    display: none;
+}
+
 @media screen and (max-width:768px){
-    #nav-bar .navbar-brand{
+    .header .logo{
         padding-left: 0;
         font-size: 25px !important;
         font-weight: bold;
         letter-spacing: 1px;
     }
-    #nav-bar .navbar{
+    .header .navbar{
         padding: 5px 0px 10px 0px !important;
         border-bottom: 2px solid rgba(255,255,255,0.1);
         margin-bottom: -1px !important;
         width: 92%;
         margin-right: auto;
         margin-left: auto;
-    }
-    #nav-bar .navbar-light .navbar-toggler {
-        border: none;
-        color: #fff !important;
     }
 }
 @media screen and (max-width:1100px){
-    #nav-bar .navbar-brand{
+    .header .logo{
         padding-left: 0;
         font-size: 25px !important;
         font-weight: bold;
         letter-spacing: 1px;
     }
-    #nav-bar .navbar{
-        padding: 5px 0px 10px 0px !important;
+    .header .navbar{
+        padding: 10px !important;
         border-bottom: 2px solid rgba(255,255,255,0.1);
         margin-bottom: -1px !important;
-        width: 92%;
-        margin-right: auto;
-        margin-left: auto;
-    }
-    #nav-bar .navbar-light .navbar-toggler {
-        border: none;
-        color: #fff !important;
+        width: 92% !important;
     }
 }
 @media screen and (max-width:767px){
-    #nav-bar .navbar-brand{
+    .header .logo{
         font-size: 20px !important;
         letter-spacing: 0;
     }
+    .hide-menu-btn{
+        top: 3%;
+        left: 88.5%;
+    }
+    .menu .mobile{
+        top: 1% !important;
+        left: 5.5% !important;
+    }
 }
 @media screen and (max-width:250px){
-    #nav-bar .navbar-toggler{
-        padding: 0;
-    }
-    #nav-bar .navbar-brand{
+    .header .logo{
         font-size: 18px !important;
         margin-right: 0;
+    }
+}
+@media screen and (max-width:991px) {
+    .show-menu-btn,.hide-menu-btn{
+        display: block;
+    }
+    .menu{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #191a1d;
+        top: -100%;
+        left: 0;
+        text-align: center;
+        padding: 80px 0;
+        line-height: normal;
+        transition: 0.7s;
+        z-index: 1;
+    }
+    .menu a{
+        display: block;
+        padding: 20px;
+    }
+    .hide-menu-btn{
+        position: absolute;
+        top: 1.75%;
+        left: 89.75% !important;
+    }
+    #chk:checked ~ .menu{
+        top: 0;
+    }
+    .menu a{
+        border-bottom: 1px solid #6e6e6e;
+        width: 92%;
+        align-self: center;
+        margin: 0;
+        padding: 15px 0;
+        font-weight: normal;
+    }
+    .menu a:nth-child(5){
+        border-bottom: none;
+    }
+    .menu a:after{
+        content: normal;
     }
 }
 
@@ -200,7 +268,7 @@ p{
 }
 #banner .container{
     padding-top: 6.5%;
-    padding-bottom: 8%;
+    padding-bottom: 10%;
     align-self: center;
 }
 #banner .banner-title {
