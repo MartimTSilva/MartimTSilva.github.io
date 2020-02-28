@@ -413,11 +413,6 @@ p{
         letter-spacing: 0;
     } 
 }
-@media screen and (max-width:991px){
-    .container{
-        padding-top: 140px !important;
-    }
-}
 
 /***********About Me***********/
 #about{
