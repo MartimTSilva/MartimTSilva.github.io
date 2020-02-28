@@ -326,7 +326,7 @@ p{
     width: 100%;
     margin-bottom: -7px;
 }
-#banner .btn, #about .btn, #contact .btn{
+#banner .btn, #about .btn, #contact .btn, #topBtn{
     background-color: #e95420;
     border: none;
     border-radius: 22px;
@@ -746,6 +746,32 @@ p{
         font-size: 14px !important;
         width: auto;
 
+    }
+}
+
+/* Button to scroll to the top */
+#topBtn{
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+    font-size: 22px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 50px;
+    display: none;
+}
+#topBtn:hover{
+    -webkit-transform: scale(1.075);
+    transform: scale(1.075);
+    -webkit-box-shadow: inset 0 0 0 2px #e95420;
+    box-shadow: inset 0 0 0 2px #e95420;
+    background: none;
+    color: #e95420;
+}
+@media screen and (max-width:370px){
+    #topBtn{
+        display: none;
     }
 }
 
