@@ -233,22 +233,24 @@
         <h1 class="title text-center">Contact</h1>
         <p class="subtitle text-center">Let's get in touch!</p>
       </div>
-      <form action="mailto:martimtsilva@hotmail.com" method="post" enctype="text/plain">
+      <form action="POST" data-netlify>
         <div class="contact-form">
-          <div class="txtb">
+          <div class="field">
             <label>Name:</label>
-            <input type="text" name="" value="" placeholder="Enter your name">
+            <input type="text" name="name" placeholder="Enter your name" required="required">
           </div>
-          <div class="txtb">
+          <div class="field">
             <label>Email:</label>
-            <input type="email" name="" value="" placeholder="Enter your email">
+            <input type="text" name="email" placeholder="Enter your email" required="required">
           </div>
-          <div class="txtb">
+          <div class="field">
             <label>Message:</label>
-            <textarea rows="10" name="text_body" style="resize:none"></textarea>
+            <textarea rows="10" name="message" style="resize:none" required="required"></textarea>
+          </div>
+          <div class="field">
+            <div data-netlify-recaptcha="true"></div>
           </div>
           <button type="submit" style="background-color:#191a1d; border: none;"><a class="btn">Send</a></button>
-         
         </div>
       </form>    
     </div>
