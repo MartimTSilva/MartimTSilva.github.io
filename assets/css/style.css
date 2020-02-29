@@ -26,7 +26,6 @@ p{
     display: block;
 }
 .titles{
-    padding-top: 20px;
     padding-bottom: 65px;
 }
 
@@ -322,10 +321,6 @@ p{
     margin-bottom: 28px;
     color: #ababab;
 }
-#banner .bottom-img {
-    width: 100%;
-    margin-bottom: -7px;
-}
 #banner .btn, #about .btn, #contact .btn, #topBtn{
     background-color: #e95420;
     border: none;
@@ -421,11 +416,8 @@ p{
 
 /***********About Me***********/
 #about{
-    padding-top: 40px;
-}
-#about .bottom-img {
-    width: 100%;
-    padding-top: 250px;
+    padding-top: 150px;
+    padding-bottom: 250px;
 }
 #about .img-fluid{
     text-align: left;
@@ -486,9 +478,6 @@ p{
         text-align: center;
         margin-bottom: 50px;
     }
-    #about .bottom-img{
-        padding-top: 100px;
-    }
 }
 @media screen and (max-width:380px){
     #about .text p{
@@ -522,11 +511,6 @@ p{
 /***********Skills***********/
 #skills{
     background-color: #191a1d;
-    padding-top: 50px;
-}
-#skills .bottom-img {
-    width: 100%;
-    padding-top: 50px;
 }
 #skills .skill-img{
     width: 100px;
@@ -576,8 +560,8 @@ p{
 
 /***********Projects***********/
 #projects{
-    background-color: #f8f9fa;
-    padding-bottom: 60px;
+    background-color: #fff;
+    padding-bottom: 100px;
     padding-top: 50px;
 }
 #projects .btn:hover{
@@ -706,13 +690,7 @@ p{
     color: #fff;
 }
 #contact .titles{
-    padding-top: 60px;
-}
-#contact .top-img {
-    width: 100%;
-}
-#contact .top-img{
-    margin-top: -10px;
+    padding-top: 50px;
 }
 #contact form{
     width: 70%;
@@ -798,4 +776,17 @@ footer .fab:hover{
 footer .fab{
     color: #ababab;
     font-size: 20px;
+}
+
+/***********SVG Backgrounds***********/
+svg {
+    background-size: cover;
+    width: 100%;
+    display: block;
+}
+svg .cls-1{
+    fill:#6e6e6e;
+}
+svg .cls-2{
+    fill:#191a1d;
 }
