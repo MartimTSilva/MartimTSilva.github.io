@@ -341,11 +341,18 @@ p{
     background: none;
 }
 #banner .img-fluid{
-    transition: transform .2s; /* Animation */
     max-width: 70% !important;
+
+    -webkit-animation: action 1.5s infinite  alternate;
+        animation: action 1.5s infinite  alternate;
 }
-#banner .img-fluid:hover {
-    transform: scale(1.009); /* Zoom scale*/
+@-webkit-keyframes action {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+@keyframes action {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
 }
 #banner .img{
     text-align: right;
@@ -582,9 +589,6 @@ p{
     letter-spacing: 0.5px;
     transition: all ease .3s; /* Animation */
 }
-#projects .project-buttons{
-    writing-mode: vertical-lr;
-}
 #projects h4{
     text-transform: uppercase;
     font-size: 26px;
@@ -613,7 +617,7 @@ p{
     margin-bottom: 30px !important;
 }
 #projects .img-fluid:hover {
-    transform: scale(1.09); /* Zoom scale*/
+    transform: scale(1.05); /* Zoom scale*/
 }
 @media screen and (max-width:991px){
     #projects .row p{
@@ -622,48 +626,25 @@ p{
     #projects li{
         line-height: normal;
     }
-    #projects .project-buttons{
-        writing-mode: unset;
-    }
     #projects .img{
         text-align-last: center;
-    }
-    #projects .img-fluid:hover {
-        transform: scale(1.35); /* Zoom scale*/
     }
 }
 @media screen and (max-width:767px){
     #projects .img-fluid:hover {
-        transform: scale(1.09); /* Zoom scale*/
+        transform: scale(1.04); /* Zoom scale*/
     }
     #projects h4{
         padding-top: 20px;
     }
-    #projects .project-buttons{
-        align-self: center;
-    }
 }  
-@media screen and (max-width:400px){
-    #projects .project-buttons{
-        writing-mode: tb;
-    }
-    #projects .project-buttons .btn{
-        width: 140px;
-        line-height: 30px;
-        font-size: 14px;
-        letter-spacing: 0;
-    }   
-}
 @media screen and (max-width:300px){
-    #projects .project-buttons .btn{
+    #projects a .btn{
         font-size: 0px;
         width: 70px;
         height: 40px;
     }
-    #projects .project-buttons{
-        writing-mode: horizontal-tb;
-    }
-    #projects .project-buttons .far , .fas, .fab{ 
+    #projects a .far , .fas, .fab{ 
         font-size: initial; 
         line-height: unset;
     }
@@ -672,12 +653,6 @@ p{
     }
 }
 @media screen and (max-width:220px){
-    #projects .project-buttons .btn{
-        margin-top: 5px;
-    }
-    #projects .project-buttons{
-        text-align: -webkit-center;
-    }
     #projects .img-fluid{
         box-shadow: 5px 5px 2.5px grey;
     }
@@ -783,10 +758,47 @@ svg {
     background-size: cover;
     width: 100%;
     display: block;
+    /* Para não ficar cortado em browsers antigos */
+    margin-bottom: -2px;
+    margin-top: -2px;
 }
 svg .cls-1{
     fill:#6e6e6e;
 }
 svg .cls-2{
     fill:#191a1d;
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    /* IE10+ CSS styles go here */
+    svg{
+        display: none;
+    }
+    #skills .container{
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+    #projects .container{
+        padding-top: 50px;
+    }
+    #about .social-buttons a::before, #about .social-buttons a:hover i{
+        background: none;
+    }
+     
+    #about .social-buttons a{
+        cursor: default;
+    }
+    #projects li{
+        margin-left: 15px;
+    }
+}
+
+@supports (-ms-ime-align:auto) {
+    /* IE Edge 12+ CSS styles go here */ 
+    #banner .container{
+        margin-top: -5px;
+    }
+    #projects li{
+        margin-left: 15px;
+    }
 }
