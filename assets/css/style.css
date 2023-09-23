@@ -1,14 +1,13 @@
 * {
     margin: 0;
     padding: 0;
-    
 }
 body *{
     font-family:"Rubik","Arial",sans-serif;
 }
 html {
     scroll-behavior: smooth;
-  }
+}
 p{
     line-height: 160%;
     font-size: 21px;
@@ -548,6 +547,10 @@ p{
 #skills p{
     color: #ababab;
 }
+#skills span {
+    color: #e95420;
+    padding: 0px 6px 0px 6px;
+}
 #skills .skill-icon{
     display: inline-block;
     width: 70px;
@@ -560,9 +563,9 @@ p{
     transition: 0.3s linear;
 }
 #skills .skill-icon i{
-    line-height: 70px;
+    line-height: 66px;
     transform: rotate(-45deg);
-    font-size: 26px;
+    /* font-size: 26px; */
 }
 
 /***********Projects***********/
@@ -707,7 +710,7 @@ p{
     position: fixed;
     bottom: 50px;
     right: 20px;
-    font-size: 22px;
+    font-size: 26px;
     width: 50px;
     height: 50px;
     cursor: pointer;
@@ -784,7 +787,6 @@ svg .cls-2{
     #about .social-buttons a::before, #about .social-buttons a:hover i{
         background: none;
     }
-     
     #about .social-buttons a{
         cursor: default;
     }
